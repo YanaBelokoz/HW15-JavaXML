@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="Flower"
+           xmlns="Flower"
+           elementFormDefault="qualified">
+
+    <xs:element name="Flower">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Flower" type="flower" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="flower">
+        <xs:sequence>
+
+            <xs:element name="Visual">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Color" type="xs:string"/>
+                        <xs:element name="LeafColor" type="xs:string"/>
+                        <xs:element name="Size" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+
+            <xs:element name="Growing">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Temp" type="xs:string"/>
+                        <xs:element name="Light" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="Multiplying" type="xs:string"/>
+            <xs:element name="Soil" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+</xs:schema>
